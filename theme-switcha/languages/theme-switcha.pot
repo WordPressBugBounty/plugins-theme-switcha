@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-06 20:47+0000\n"
+"POT-Creation-Date: 2024-10-15 20:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -57,7 +57,7 @@ msgid "Apply switched theme to Admin Area"
 msgstr ""
 
 #: inc/settings-reset.php:36
-msgid "at checkout. Sale ends 5/25/24."
+msgid "at checkout. Sale ends 12/21/24."
 msgstr ""
 
 #: inc/settings-register.php:19
@@ -144,16 +144,16 @@ msgstr ""
 msgid "Everyone"
 msgstr ""
 
+#: inc/settings-reset.php:31
+msgid "Fall Sale!"
+msgstr ""
+
 #: inc/settings-register.php:17
 msgid "General Settings"
 msgstr ""
 
 #: theme-switcha.php:151
 msgid "Get Theme Switcha Pro!"
-msgstr ""
-
-#: inc/settings-reset.php:31
-msgid "Go Pro!"
 msgstr ""
 
 #: theme-switcha.php:152
@@ -271,10 +271,6 @@ msgid ""
 "URL."
 msgstr ""
 
-#: inc/settings-reset.php:32
-msgid "Save 30% on our"
-msgstr ""
-
 #: theme-switcha.php:126
 msgid "Settings"
 msgstr ""
@@ -297,6 +293,10 @@ msgstr ""
 
 #: inc/settings-register.php:117
 msgid "Switched Theme:"
+msgstr ""
+
+#: inc/settings-reset.php:32
+msgid "Take 25% OFF any of our"
 msgstr ""
 
 #: inc/settings-register.php:82

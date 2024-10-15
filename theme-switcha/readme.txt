@@ -9,9 +9,9 @@ Contributors: specialk
 Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Requires at least: 4.6
-Tested up to: 6.6
-Stable tag: 3.3.4
-Version:    3.3.4
+Tested up to: 6.7
+Stable tag: 3.3.5
+Version:    3.3.5
 Requires PHP: 5.6.20
 Text Domain: theme-switcha
 Domain Path: /languages
@@ -461,12 +461,11 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 If you like Theme Switcha, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/theme-switcha/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
-**3.3.4 (2024/06/25)**
+**3.3.5 (2024/10/15)**
 
-* Fixes bug with `dismiss_notice_link`
 * Updates plugin settings page
 * Updates default translation template
-* Tests on WordPress 6.6 (beta)
+* Tests on WordPress 6.7 (beta)
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/theme-switcha.txt](https://plugin-planet.com/wp/changelog/theme-switcha.txt)
