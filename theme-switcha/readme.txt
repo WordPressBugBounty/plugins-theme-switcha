@@ -8,10 +8,10 @@ Author: Jeff Starr
 Contributors: specialk
 Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
-Requires at least: 4.6
-Tested up to: 6.7
-Stable tag: 3.3.5
-Version:    3.3.5
+Requires at least: 4.7
+Tested up to: 6.8
+Stable tag: 3.4
+Version:    3.4
 Requires PHP: 5.6.20
 Text Domain: theme-switcha
 Domain Path: /languages
@@ -47,7 +47,7 @@ Theme Switcha:
 
 **What it's NOT for..**
 
-This plugin **should not** be used together with WordPress features such as Gutenberg Block Editor, Theme Customizer, Widgets, Menus, and other theme-related options. Doing so may result in private changes being made public on the current active theme. [Learn more](https://wordpress.org/support/topic/important-please-read-2/).
+This plugin **should not** be used together with WordPress features such as the Theme Customizer, Widgets, and Menus. Doing so may result in private changes being made public on the current active theme. [Learn more](https://wordpress.org/support/topic/important-please-read-3/).
 
 > Theme Switcha = Best Theme Switcher for WordPress
 
@@ -97,6 +97,7 @@ The Theme Switcha plugin is useful for things like:
 
 * __Maintenance mode__ - display a temporary theme to visitors while you update your primary theme
 * __Theme test drive__ - preview and test new themes without disrupting anything on the frontend
+* __Debugging Themes__ - test and troubleshoot issues that may be related to the current active theme
 * __Theme development__ - perfect for developing new theme templates to fit existing site content
 * __Client presentations__ - send clients special "theme preview" links to show off new templates
 
@@ -107,7 +108,7 @@ I use Theme Switcha to develop new themes for my own sites like [Perishable Pres
 
 This plugin does not collect or store any user data. It does not set any user cookies, and it does not connect to any third-party locations. Thus, this plugin does not affect user privacy in any way.
 
-Theme Switcha is developed and maintained by [Jeff Starr](https://twitter.com/perishable), 15-year [WordPress developer](https://plugin-planet.com/) and [book author](https://books.perishablepress.com/).
+Theme Switcha is developed and maintained by [Jeff Starr](https://x.com/perishable), 15-year [WordPress developer](https://plugin-planet.com/) and [book author](https://books.perishablepress.com/).
  
 
 **Support development**
@@ -126,6 +127,7 @@ And/or purchase one of my premium WordPress plugins:
 * [Blackhole Pro](https://plugin-planet.com/blackhole-pro/) - Automatically block bad bots
 * [Banhammer Pro](https://plugin-planet.com/banhammer-pro/) - Monitor traffic and ban the bad guys
 * [GA Google Analytics Pro](https://plugin-planet.com/ga-google-analytics-pro/) - Connect WordPress to Google Analytics
+* [Head Meta Pro](https://plugin-planet.com/head-meta-pro/) - Ultimate Meta Tags for WordPress
 * [Simple Ajax Chat Pro](https://plugin-planet.com/simple-ajax-chat-pro/) - Unlimited chat rooms
 * [USP Pro](https://plugin-planet.com/usp-pro/) - Unlimited front-end forms
 
@@ -148,7 +150,7 @@ Links, tweets and likes also appreciated. Thank you! :)
 3. After clicking "Save Changes", scroll down to view available themes
 4. Click on any theme thumbnail to switch privately to that theme
 
-**Important:** Please read this [support topic](https://wordpress.org/support/topic/important-please-read-2/)!
+**Important:** Please read this [support topic](https://wordpress.org/support/topic/important-please-read-3/)!
 
 More info on [installing WP plugins](https://wordpress.org/support/article/managing-plugins/#installing-plugins)
 
@@ -254,7 +256,7 @@ Here you would replace "THEMESLUG" with the slug of the theme you want to previe
 
 **Important**
 
-This plugin **should not** be used together with WordPress features such as Gutenberg Block Editor, Theme Customizer, Widgets, Menus, and other theme-related options. Doing so may result in private changes being made public on the current active theme. [Learn more](https://wordpress.org/support/topic/important-please-read-2/).
+This plugin **should not** be used together with WordPress features such as the Theme Customizer, Widgets, and Menus. Doing so may result in private changes being made public on the current active theme. [Learn more](https://wordpress.org/support/topic/important-please-read-3/).
 
 
 **Plugin Options**
@@ -403,12 +405,12 @@ Short answer: "no", stay away from the Appearance &gt; Themes screen while switc
 
 **Theme settings not saved after theme switching disabled?**
 
-As explained in the plugin documentation, Theme Switcha should not be used with admin-related functionality like Gutenberg, Customizer, Widgets, Menus, etc. You can learn more about this [here](https://wordpress.org/support/topic/important-please-read-2/).
+As explained in the plugin documentation, Theme Switcha should not be used with admin-related functionality like the Theme Customizer, Widgets, Menus, etc. You can learn more about this [here](https://wordpress.org/support/topic/important-please-read-3/).
 
 
 **Widgets are not saved after theme switching is disabled?**
 
-As explained in the plugin documentation, Theme Switcha should not be used with admin-related functionality like Gutenberg, Customizer, Widgets, Menus, etc. You can learn more about this [here](https://wordpress.org/support/topic/important-please-read-2/).
+As explained in the plugin documentation, Theme Switcha should not be used with admin-related functionality like the Theme Customizer, Widgets, Menus, etc. You can learn more about this [here](https://wordpress.org/support/topic/important-please-read-3/).
 
 
 **When I switch themes, will it apply to all admins or just me?**
@@ -445,9 +447,9 @@ Theme Switcha is meant for temporarily switching themes. To actually change the 
 
 **How do I go live with changes made to my theme?**
 
-First, as explained [here](https://wordpress.org/support/topic/important-please-read-2/), Theme Switcha is for making changes to your theme template. With that in mind. If you switch to the "Awesome" theme using Theme Switcha, and then modify the theme template files, those changes will be made public once you change the default active theme to "Awesome" (via the WP Themes page). 
+First, as explained [here](https://wordpress.org/support/topic/important-please-read-3/), Theme Switcha is for making changes to your theme template. With that in mind. If you switch to the "Awesome" theme using Theme Switcha, and then modify the theme template files, those changes will be made public once you change the default active theme to "Awesome" (via the WP Themes page). 
 
-__Note:__ For any admin-related features like the Customizer, Widgets, Menus, and other theme-related options, any changes made to a switched theme may or may not be remembered after activating the theme as the site's default active theme. This is why Theme Switcha is not recommended for use with admin features like Customizer, Widgets, etc. To learn more, read this [Important Information](https://wordpress.org/support/topic/important-please-read-2/).
+__Note:__ For any admin-related features like the Customizer, Widgets, Menus, and other theme-related options, any changes made to a switched theme may or may not be remembered after activating the theme as the site's default active theme. This is why Theme Switcha is not recommended for use with admin features like Customizer, Widgets, etc. To learn more, read this [Important Information](https://wordpress.org/support/topic/important-please-read-3/).
 
 
 **Got a question?**
@@ -461,11 +463,21 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 If you like Theme Switcha, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/theme-switcha/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
-**3.3.5 (2024/10/15)**
+**3.4 (2025/03/22)**
 
+* Fixes PHP Notice, re: `_load_textdomain_just_in_time`
+* Fixes redirection bug when using shortcodes ([Thanks](https://wordpress.org/support/topic/a-problem-with-redirection/) [@lex17](https://wordpress.org/support/users/lex17/))
+* Adds uninstall option `theme-switcha-dismiss-notice`
+* Adds filter hook `theme_switcha_default_url`
+* Adds filter hook `theme_switcha_get_domain`
+* Adds filter hook `theme_switcha_get_request`
+* Adds filter hook `theme_switcha_current_url`
+* Removes `load_i18n()` function
+* Bumps minimum required WP version
 * Updates plugin settings page
-* Updates default translation template
-* Tests on WordPress 6.7 (beta)
+* Updates numerous support links
+* Generates new language template
+* Tests on WordPress 6.8
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/theme-switcha.txt](https://plugin-planet.com/wp/changelog/theme-switcha.txt)

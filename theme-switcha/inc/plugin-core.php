@@ -336,7 +336,19 @@ function theme_switcha_display_thumbs() {
 	
 	$current_theme = (!empty($enable_plugin) && isset($_COOKIE['theme_switcha_theme_'. COOKIEHASH])) ? $_COOKIE['theme_switcha_theme_'. COOKIEHASH] : $default_theme->Stylesheet;
 	
-	$base_url = get_permalink();
+	if (is_home() || is_front_page()) {
+		
+		$base_url = theme_switcha_default_url();
+		
+	} elseif (is_single() || is_page()) {
+		
+		$base_url = get_permalink();
+		
+	} else {
+		
+		$base_url = theme_switcha_current_url();
+		
+	}
 	
 	if (empty($enable_plugin)) return;
 	
@@ -434,7 +446,19 @@ function theme_switcha_display_list($display) {
 	
 	$current_theme = (!empty($enable_plugin) && isset($_COOKIE['theme_switcha_theme_'. COOKIEHASH])) ? $_COOKIE['theme_switcha_theme_'. COOKIEHASH] : $default_theme->Stylesheet;
 	
-	$base_url = get_permalink();
+	if (is_home() || is_front_page()) {
+		
+		$base_url = theme_switcha_default_url();
+		
+	} elseif (is_single() || is_page()) {
+		
+		$base_url = get_permalink();
+		
+	} else {
+		
+		$base_url = theme_switcha_current_url();
+		
+	}
 	
 	if (empty($enable_plugin)) return;
 	
@@ -657,3 +681,41 @@ function theme_switcha_display_text_link($attr, $content = null) {
 	
 }
 add_shortcode('theme_switcha_link', 'theme_switcha_display_text_link');
+
+//
+
+function theme_switcha_default_url() {
+	
+	$url = trailingslashit(get_home_url());
+	
+	return apply_filters('theme_switcha_default_url', $url);
+	
+}
+
+function theme_switcha_get_domain() {
+	
+	$protocol = is_ssl() ? 'https://' : 'http://';
+	
+	$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'undefined';
+	
+	$domain = $protocol . $host;
+	
+	return apply_filters('theme_switcha_get_domain', $domain, $protocol, $host);
+	
+}
+
+function theme_switcha_get_request() {
+	
+	$request = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/na';
+	
+	return apply_filters('theme_switcha_get_request', $request);
+	
+}
+
+function theme_switcha_current_url() {
+	
+	$url = esc_url_raw(theme_switcha_get_domain() . theme_switcha_get_request());
+	
+	return apply_filters('theme_switcha_current_url', $url);
+	
+}

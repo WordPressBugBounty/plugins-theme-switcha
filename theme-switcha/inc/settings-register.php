@@ -20,7 +20,7 @@ function theme_switcha_register_settings() {
 	
 	// add_settings_field( $id, $title, $callback, $page, $section, $args );
 	add_settings_field('enable_plugin',  __('Enable Switching',    'theme-switcha'), 'theme_switcha_callback_checkbox', 'theme_switcha_options', 'settings', array('id' => 'enable_plugin',  'label' => esc_html__('Enable theme switching', 'theme-switcha')));
-	add_settings_field('enable_admin',   __('Enable Admin Area',   'theme-switcha'), 'theme_switcha_callback_checkbox', 'theme_switcha_options', 'settings', array('id' => 'enable_admin',   'label' => esc_html__('Apply switched theme to Admin Area', 'theme-switcha') .' (<a target="_blank" rel="noopener noreferrer" href="https://wordpress.org/support/topic/important-please-read-2/">'. esc_html__('Important Note', 'theme-switcha') .'</a>)'));
+	add_settings_field('enable_admin',   __('Enable Admin Area',   'theme-switcha'), 'theme_switcha_callback_checkbox', 'theme_switcha_options', 'settings', array('id' => 'enable_admin',   'label' => esc_html__('Apply switched theme to Admin Area', 'theme-switcha') .' (<a target="_blank" rel="noopener noreferrer" href="https://wordpress.org/support/topic/important-please-read-3/">'. esc_html__('Important Note', 'theme-switcha') .'</a>)'));
 	add_settings_field('enable_toolbar', __('Enable Toolbar Menu', 'theme-switcha'), 'theme_switcha_callback_checkbox', 'theme_switcha_options', 'settings', array('id' => 'enable_toolbar', 'label' => esc_html__('Enable Theme Switch menu in Toolbar', 'theme-switcha')));
 	add_settings_field('disable_widget', __('Dashboard Widget',    'theme-switcha'), 'theme_switcha_callback_checkbox', 'theme_switcha_options', 'settings', array('id' => 'disable_widget', 'label' => esc_html__('Disable dashboard widget for non-admin users', 'theme-switcha')));
 	add_settings_field('allowed_users',  __('Allowed Users',       'theme-switcha'), 'theme_switcha_callback_select',   'theme_switcha_options', 'settings', array('id' => 'allowed_users',  'label' => esc_html__('Allow these users to switch themes', 'theme-switcha')));
@@ -62,15 +62,18 @@ function theme_switcha_validate_options($input) {
 function theme_switcha_settings_section_options() {
 	
 	$item_1  = '<a target="_blank" rel="noopener noreferrer" href="https://wp-tao.com/wordpress-themes-book/" title="'. esc_html__('WordPress Themes In Depth', 'theme-switcha') .'">';
-	$item_1 .= '<img src="'. plugins_url('img/resources/wp-themes-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt="'. esc_html__('WordPress Themes In Depth', 'theme-switcha') .'"></a>';
+	$item_1 .= '<img src="'. plugins_url('img/resources/wp-themes-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt=""></a>';
 
 	$item_2  = '<a target="_blank" rel="noopener noreferrer" href="https://books.perishablepress.com/downloads/wizards-collection-sql-recipes-wordpress/" title="'. esc_html__('Wizard&rsquo;s SQL Recipes for WordPress', 'theme-switcha') .'">';
-	$item_2 .= '<img src="'. plugins_url('img/resources/wizards-sql-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt="'. esc_html__('Wizard&rsquo;s SQL Recipes for WordPress', 'theme-switcha') .'"></a>';
+	$item_2 .= '<img src="'. plugins_url('img/resources/wizards-sql-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt=""></a>';
 	
-	$item_3  = '<a target="_blank" rel="noopener noreferrer" href="https://plugin-planet.com/simple-ajax-chat-pro/" title="'. esc_html__('Simple Ajax Chat PRO', 'theme-switcha') .'">';
-	$item_3 .= '<img src="'. plugins_url('img/resources/sac-pro-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt="'. esc_html__('Simple Ajax Chat PRO', 'theme-switcha') .'"></a>';
+	$item_3  = '<a target="_blank" rel="noopener noreferrer" href="https://plugin-planet.com/simple-ajax-chat-pro/" title="'. esc_html__('Simple Ajax Chat Pro: Own Your Chats', 'theme-switcha') .'">';
+	$item_3 .= '<img src="'. plugins_url('img/resources/sac-pro-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt=""></a>';
 	
-	$items  = array($item_2, $item_3);
+	$item_4  = '<a target="_blank" rel="noopener noreferrer" href="https://plugin-planet.com/head-meta-pro/" title="'. esc_html__('Head Meta Pro: Perfect Meta Tags for WordPress', 'theme-switcha') .'">';
+	$item_4 .= '<img src="'. plugins_url('img/resources/head-meta-pro-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt=""></a>';
+	
+	$items  = array($item_2, $item_3, $item_4);
 	
 	$key    = array_rand($items);
 	$random = isset($items[$key]) ? $items[$key] : '';

@@ -28,6 +28,7 @@
 .wp-admin .book-blurb { float: right; width: 48%; }
 .wp-admin .book-blurb-wrap { width: 240px; height: 60px; padding: 2px; border: 1px solid #E0E0E0; }
 .wp-admin .book-blurb a { width: 240px; height: 60px; display: block; opacity: 0.9; }
+.wp-admin .book-blurb a:link, .wp-admin .book-blurb a:visited, .wp-admin .book-blurb a:hover, .wp-admin .book-blurb a:after { box-shadow: none; }
 .wp-admin .book-blurb a:hover { opacity: 1.0; }
 .wp-admin .book-blurb img { width: 240px; height: 60px; display: block; }
 

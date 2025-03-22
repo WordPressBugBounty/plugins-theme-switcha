@@ -8,10 +8,10 @@
 	Contributors: specialk
 	Author URI: https://plugin-planet.com/
 	Donate link: https://monzillamedia.com/donate.html
-	Requires at least: 4.6
-	Tested up to: 6.7
-	Stable tag: 3.3.5
-	Version:    3.3.5
+	Requires at least: 4.7
+	Tested up to: 6.8
+	Stable tag: 3.4
+	Version:    3.4
 	Requires PHP: 5.6.20
 	Text Domain: theme-switcha
 	Domain Path: /languages
@@ -32,7 +32,7 @@
 	You should have received a copy of the GNU General Public License
 	with this program. If not, visit: https://www.gnu.org/licenses/
 	
-	Copyright 2024 Monzilla Media. All rights reserved.
+	Copyright 2025 Monzilla Media. All rights reserved.
 */
 
 if (!defined('ABSPATH')) die();
@@ -55,7 +55,6 @@ if (!class_exists('Theme_Switcha')) {
 				
 				add_action('admin_init',          array(self::$instance, 'check_existing'));
 				add_action('admin_init',          array(self::$instance, 'check_version'));
-				add_action('init',                array(self::$instance, 'load_i18n'));
 				add_filter('plugin_action_links', array(self::$instance, 'action_links'), 10, 2);
 				add_filter('plugin_row_meta',     array(self::$instance, 'plugin_links'), 10, 2);
 				add_filter('admin_footer_text',   array(self::$instance, 'footer_text'),  10, 1);
@@ -97,8 +96,8 @@ if (!class_exists('Theme_Switcha')) {
 		
 		private function constants() {
 			
-			if (!defined('THEME_SWITCHA_REQUIRE')) define('THEME_SWITCHA_REQUIRE', '4.6');
-			if (!defined('THEME_SWITCHA_VERSION')) define('THEME_SWITCHA_VERSION', '3.3.5');
+			if (!defined('THEME_SWITCHA_REQUIRE')) define('THEME_SWITCHA_REQUIRE', '4.7');
+			if (!defined('THEME_SWITCHA_VERSION')) define('THEME_SWITCHA_VERSION', '3.4');
 			if (!defined('THEME_SWITCHA_NAME'))    define('THEME_SWITCHA_NAME',    'Theme Switcha');
 			if (!defined('THEME_SWITCHA_AUTHOR'))  define('THEME_SWITCHA_AUTHOR',  'Jeff Starr');
 			if (!defined('THEME_SWITCHA_HOME'))    define('THEME_SWITCHA_HOME',    'https://perishablepress.com/theme-switcha/');
@@ -216,10 +215,6 @@ if (!class_exists('Theme_Switcha')) {
 					}
 				}
 			}
-		}
-		
-		public function load_i18n() {
-			load_plugin_textdomain('theme-switcha', false, dirname(THEME_SWITCHA_FILE) .'/languages/');
 		}
 		
 		public function __clone() {
