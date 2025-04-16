@@ -612,6 +612,8 @@ function theme_switcha_display_dropdown_shortcode($attr, $content = null) {
 		'text' => 'Choose a theme..',
 	), $attr));
 	
+	$text = esc_html($text);
+	
 	$output = theme_switcha_display_dropdown($text);
 	
 	return $output;

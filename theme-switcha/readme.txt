@@ -10,8 +10,8 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Requires at least: 4.7
 Tested up to: 6.8
-Stable tag: 3.4
-Version:    3.4
+Stable tag: 3.4.1
+Version:    3.4.1
 Requires PHP: 5.6.20
 Text Domain: theme-switcha
 Domain Path: /languages
@@ -461,6 +461,11 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 == Changelog ==
 
 If you like Theme Switcha, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/theme-switcha/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
+
+
+**3.4.1 (2025/04/16)**
+
+* Improves sanitization for `text` attribute for `[theme_switcha_select]`
 
 
 **3.4 (2025/03/22)**

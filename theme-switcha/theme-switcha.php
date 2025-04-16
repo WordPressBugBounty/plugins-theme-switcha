@@ -10,8 +10,8 @@
 	Donate link: https://monzillamedia.com/donate.html
 	Requires at least: 4.7
 	Tested up to: 6.8
-	Stable tag: 3.4
-	Version:    3.4
+	Stable tag: 3.4.1
+	Version:    3.4.1
 	Requires PHP: 5.6.20
 	Text Domain: theme-switcha
 	Domain Path: /languages
@@ -97,7 +97,7 @@ if (!class_exists('Theme_Switcha')) {
 		private function constants() {
 			
 			if (!defined('THEME_SWITCHA_REQUIRE')) define('THEME_SWITCHA_REQUIRE', '4.7');
-			if (!defined('THEME_SWITCHA_VERSION')) define('THEME_SWITCHA_VERSION', '3.4');
+			if (!defined('THEME_SWITCHA_VERSION')) define('THEME_SWITCHA_VERSION', '3.4.1');
 			if (!defined('THEME_SWITCHA_NAME'))    define('THEME_SWITCHA_NAME',    'Theme Switcha');
 			if (!defined('THEME_SWITCHA_AUTHOR'))  define('THEME_SWITCHA_AUTHOR',  'Jeff Starr');
 			if (!defined('THEME_SWITCHA_HOME'))    define('THEME_SWITCHA_HOME',    'https://perishablepress.com/theme-switcha/');
