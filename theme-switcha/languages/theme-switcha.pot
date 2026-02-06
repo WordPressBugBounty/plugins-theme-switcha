@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 18:02+0000\n"
+"POT-Creation-Date: 2026-02-03 15:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,13 +14,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: theme-switcha.php:188
+#: theme-switcha.php:187
 msgid ""
 " currently active. Free and Pro versions cannot be activated at the same "
 "time. "
 msgstr ""
 
-#: theme-switcha.php:209
+#: theme-switcha.php:208
 msgid " or higher, and has been deactivated! "
 msgstr ""
 
@@ -44,7 +44,7 @@ msgstr ""
 msgid "and"
 msgstr ""
 
-#: theme-switcha.php:191
+#: theme-switcha.php:190
 msgid "and try again."
 msgstr ""
 
@@ -57,7 +57,7 @@ msgid "Apply switched theme to Admin Area"
 msgstr ""
 
 #: inc/settings-reset.php:36
-msgid "at checkout. Sale ends 6/25/2025."
+msgid "at checkout. Sale ends 3/28/2026."
 msgstr ""
 
 #: inc/settings-register.php:19
@@ -68,7 +68,7 @@ msgstr ""
 msgid "books"
 msgstr ""
 
-#: theme-switcha.php:221 theme-switcha.php:225
+#: theme-switcha.php:224 theme-switcha.php:228
 msgid "Cheatin&rsquo; huh?"
 msgstr ""
 
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Child Theme"
 msgstr ""
 
-#: inc/plugin-core.php:19 inc/plugin-core.php:624
+#: inc/plugin-core.php:19 inc/plugin-core.php:626
 msgid "Choose a theme.."
 msgstr ""
 
@@ -84,7 +84,7 @@ msgstr ""
 msgid "Click any thumbnail to switch themes."
 msgstr ""
 
-#: theme-switcha.php:144
+#: theme-switcha.php:143
 msgid "Click here to rate and review this plugin on WordPress.org"
 msgstr ""
 
@@ -148,11 +148,11 @@ msgstr ""
 msgid "General Settings"
 msgstr ""
 
-#: theme-switcha.php:150
+#: theme-switcha.php:149
 msgid "Get Theme Switcha Pro!"
 msgstr ""
 
-#: theme-switcha.php:151
+#: theme-switcha.php:150
 msgid "Go&nbsp;Pro"
 msgstr ""
 
@@ -165,7 +165,7 @@ msgid ""
 "Help keep Theme Switcha going strong! A huge THANK YOU for your support!"
 msgstr ""
 
-#: theme-switcha.php:139
+#: theme-switcha.php:138
 msgid "Homepage"
 msgstr ""
 
@@ -185,7 +185,7 @@ msgstr ""
 msgid "Jeff Starr"
 msgstr ""
 
-#: theme-switcha.php:168
+#: theme-switcha.php:167
 msgid "Like this plugin? Give it a"
 msgstr ""
 
@@ -221,15 +221,15 @@ msgstr ""
 msgid "Passkey for theme-switch links (alphanumeric only)"
 msgstr ""
 
-#: theme-switcha.php:189 theme-switcha.php:210
+#: theme-switcha.php:188 theme-switcha.php:209
 msgid "Please return to the"
 msgstr ""
 
-#: theme-switcha.php:138
+#: theme-switcha.php:137
 msgid "Plugin Homepage"
 msgstr ""
 
-#: theme-switcha.php:187
+#: theme-switcha.php:186
 msgid "Pro version of "
 msgstr ""
 
@@ -245,11 +245,11 @@ msgstr ""
 msgid "Rate Plugin"
 msgstr ""
 
-#: theme-switcha.php:145
+#: theme-switcha.php:144
 msgid "Rate this plugin"
 msgstr ""
 
-#: theme-switcha.php:208
+#: theme-switcha.php:207
 msgid "requires WordPress "
 msgstr ""
 
@@ -271,7 +271,7 @@ msgid ""
 "URL."
 msgstr ""
 
-#: theme-switcha.php:125
+#: theme-switcha.php:124
 msgid "Settings"
 msgstr ""
 
@@ -291,16 +291,12 @@ msgstr ""
 msgid "Simple Ajax Chat Pro: Own Your Chats"
 msgstr ""
 
-#: inc/settings-reset.php:31
-msgid "Spring Sale!"
-msgstr ""
-
 #: inc/settings-register.php:120
 msgid "Switched Theme:"
 msgstr ""
 
 #: inc/settings-reset.php:32
-msgid "Take 30% OFF any of our"
+msgid "Take 20% OFF any of our"
 msgstr ""
 
 #: inc/settings-register.php:85
@@ -308,7 +304,7 @@ msgid "Thanks for using Theme Switcha :)"
 msgstr ""
 
 #. Name of the plugin
-#: inc/plugin-core.php:23 inc/plugin-core.php:638
+#: inc/plugin-core.php:23 inc/plugin-core.php:640
 msgid "Theme Switcha"
 msgstr ""
 
@@ -324,7 +320,7 @@ msgstr ""
 msgid "Tip:"
 msgstr ""
 
-#: theme-switcha.php:212
+#: theme-switcha.php:211
 msgid "to upgrade WordPress and try again."
 msgstr ""
 
@@ -341,7 +337,7 @@ msgstr ""
 msgid "Visit the plugins docs"
 msgstr ""
 
-#: theme-switcha.php:186
+#: theme-switcha.php:185
 msgid "Warning:"
 msgstr ""
 
@@ -353,7 +349,7 @@ msgstr ""
 msgid "WordPress Themes In Depth"
 msgstr ""
 
-#: theme-switcha.php:190 theme-switcha.php:211
+#: theme-switcha.php:189 theme-switcha.php:210
 msgid "WP Admin Area"
 msgstr ""
 
@@ -361,6 +357,10 @@ msgstr ""
 msgid "Yes, make it so."
 msgstr ""
 
-#: theme-switcha.php:172
+#: theme-switcha.php:171
 msgid "★★★★★ rating&nbsp;&raquo;"
+msgstr ""
+
+#: inc/settings-reset.php:31
+msgid "❄️ Winter Sale!"
 msgstr ""

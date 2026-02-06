@@ -26,14 +26,14 @@ function theme_switcha_admin_notice() {
 			
 			?>
 			
-			<div class="notice notice-success notice-margin notice-custom">
+			<div class="notice notice-success notice-lh">
 				<p>
-					<strong><?php esc_html_e('Spring Sale!', 'theme-switcha'); ?></strong> 
-					<?php esc_html_e('Take 30% OFF any of our', 'theme-switcha'); ?> 
+					<strong><?php esc_html_e('❄️ Winter Sale!', 'theme-switcha'); ?></strong> 
+					<?php esc_html_e('Take 20% OFF any of our', 'theme-switcha'); ?> 
 					<a target="_blank" rel="noopener noreferrer" href="https://plugin-planet.com/"><?php esc_html_e('Pro WordPress plugins', 'theme-switcha'); ?></a> 
 					<?php esc_html_e('and', 'theme-switcha'); ?> 
 					<a target="_blank" rel="noopener noreferrer" href="https://books.perishablepress.com/"><?php esc_html_e('books', 'theme-switcha'); ?></a>. 
-					<?php esc_html_e('Apply code', 'theme-switcha'); ?> <code>SPRING2025</code> <?php esc_html_e('at checkout. Sale ends 6/25/2025.', 'theme-switcha'); ?> 
+					<?php esc_html_e('Apply code', 'theme-switcha'); ?> <code>WINTER20</code> <?php esc_html_e('at checkout. Sale ends 3/28/2026.', 'theme-switcha'); ?> 
 					<?php echo theme_switcha_dismiss_notice_link(); ?>
 				</p>
 			</div>
@@ -112,7 +112,7 @@ function theme_switcha_dismiss_notice_link() {
 
 function theme_switcha_check_date_expired() {
 	
-	$expires = apply_filters('theme_switcha_check_date_expired', '2025-06-25');
+	$expires = apply_filters('theme_switcha_check_date_expired', '2026-03-28');
 	
 	return (new DateTime() > new DateTime($expires)) ? true : false;
 	

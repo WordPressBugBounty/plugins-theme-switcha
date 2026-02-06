@@ -9,16 +9,14 @@
 	Author URI: https://plugin-planet.com/
 	Donate link: https://monzillamedia.com/donate.html
 	Requires at least: 4.7
-	Tested up to: 6.8
-	Stable tag: 3.4.1
-	Version:    3.4.1
+	Tested up to: 6.9
+	Stable tag: 3.4.3
+	Version:    3.4.3
 	Requires PHP: 5.6.20
 	Text Domain: theme-switcha
 	Domain Path: /languages
 	License: GPL v3 or later
-*/
-
-/*
+	
 	This program is free software; you can redistribute it and/or
 	modify it under the terms of the GNU General Public License
 	as published by the Free Software Foundation; either version 
@@ -32,7 +30,7 @@
 	You should have received a copy of the GNU General Public License
 	with this program. If not, visit: https://www.gnu.org/licenses/
 	
-	Copyright 2025 Monzilla Media. All rights reserved.
+	Copyright 2016-2026 Monzilla Media. All rights reserved.
 */
 
 if (!defined('ABSPATH')) die();
@@ -55,6 +53,7 @@ if (!class_exists('Theme_Switcha')) {
 				
 				add_action('admin_init',          array(self::$instance, 'check_existing'));
 				add_action('admin_init',          array(self::$instance, 'check_version'));
+				add_action('init',                array(self::$instance, 'load_i18n'));
 				add_filter('plugin_action_links', array(self::$instance, 'action_links'), 10, 2);
 				add_filter('plugin_row_meta',     array(self::$instance, 'plugin_links'), 10, 2);
 				add_filter('admin_footer_text',   array(self::$instance, 'footer_text'),  10, 1);
@@ -97,7 +96,7 @@ if (!class_exists('Theme_Switcha')) {
 		private function constants() {
 			
 			if (!defined('THEME_SWITCHA_REQUIRE')) define('THEME_SWITCHA_REQUIRE', '4.7');
-			if (!defined('THEME_SWITCHA_VERSION')) define('THEME_SWITCHA_VERSION', '3.4.1');
+			if (!defined('THEME_SWITCHA_VERSION')) define('THEME_SWITCHA_VERSION', '3.4.3');
 			if (!defined('THEME_SWITCHA_NAME'))    define('THEME_SWITCHA_NAME',    'Theme Switcha');
 			if (!defined('THEME_SWITCHA_AUTHOR'))  define('THEME_SWITCHA_AUTHOR',  'Jeff Starr');
 			if (!defined('THEME_SWITCHA_HOME'))    define('THEME_SWITCHA_HOME',    'https://perishablepress.com/theme-switcha/');
@@ -215,6 +214,10 @@ if (!class_exists('Theme_Switcha')) {
 					}
 				}
 			}
+		}
+		
+		public function load_i18n() {
+			load_plugin_textdomain('theme-switcha', false, dirname(THEME_SWITCHA_FILE) .'/languages/');
 		}
 		
 		public function __clone() {
