@@ -9,9 +9,9 @@
 	Author URI: https://plugin-planet.com/
 	Donate link: https://monzillamedia.com/donate.html
 	Requires at least: 4.7
-	Tested up to: 6.9
-	Stable tag: 3.4.3
-	Version:    3.4.3
+	Tested up to: 7.0
+	Stable tag: 3.4.4
+	Version:    3.4.4
 	Requires PHP: 5.6.20
 	Text Domain: theme-switcha
 	Domain Path: /languages
@@ -96,7 +96,7 @@ if (!class_exists('Theme_Switcha')) {
 		private function constants() {
 			
 			if (!defined('THEME_SWITCHA_REQUIRE')) define('THEME_SWITCHA_REQUIRE', '4.7');
-			if (!defined('THEME_SWITCHA_VERSION')) define('THEME_SWITCHA_VERSION', '3.4.3');
+			if (!defined('THEME_SWITCHA_VERSION')) define('THEME_SWITCHA_VERSION', '3.4.4');
 			if (!defined('THEME_SWITCHA_NAME'))    define('THEME_SWITCHA_NAME',    'Theme Switcha');
 			if (!defined('THEME_SWITCHA_AUTHOR'))  define('THEME_SWITCHA_AUTHOR',  'Jeff Starr');
 			if (!defined('THEME_SWITCHA_HOME'))    define('THEME_SWITCHA_HOME',    'https://perishablepress.com/theme-switcha/');
@@ -140,7 +140,7 @@ if (!class_exists('Theme_Switcha')) {
 				$links[] = '<a target="_blank" rel="noopener noreferrer" href="'. $home_href .'" title="'. $home_title .'">'. $home_text .'</a>';
 				
 				$rate_href  = 'https://wordpress.org/support/plugin/'. THEME_SWITCHA_SLUG .'/reviews/?rate=5#new-post';
-				$rate_title = esc_html__('Click here to rate and review this plugin on WordPress.org', 'theme-switcha');
+				$rate_title = esc_html__('Click here to rate and review this plugin at WordPress.org', 'theme-switcha');
 				$rate_text  = esc_html__('Rate this plugin', 'theme-switcha') .'&nbsp;&raquo;';
 				
 				$links[]    = '<a target="_blank" rel="noopener noreferrer" href="'. $rate_href .'" title="'. $rate_title .'">'. $rate_text .'</a>';
@@ -205,9 +205,9 @@ if (!class_exists('Theme_Switcha')) {
 						
 						$msg  = '<strong>'. THEME_SWITCHA_NAME .'</strong> ';
 						$msg .= esc_html__('requires WordPress ', 'theme-switcha') . THEME_SWITCHA_REQUIRE;
-						$msg .= esc_html__(' or higher, and has been deactivated! ', 'theme-switcha');
+						$msg .= esc_html__(' or higher, and has been deactivated. ', 'theme-switcha');
 						$msg .= esc_html__('Please return to the', 'theme-switcha');
-						$msg .= ' <a href="'. admin_url() .'">'. esc_html__('WP Admin Area', 'theme-switcha') .'</a> '; 
+						$msg .= ' <a href="'. admin_url('plugins.php') .'">'. esc_html__('WordPress Admin Area', 'theme-switcha') .'</a> '; 
 						$msg .= esc_html__('to upgrade WordPress and try again.', 'theme-switcha');
 						
 						wp_die($msg);
