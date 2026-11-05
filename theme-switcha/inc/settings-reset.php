@@ -28,12 +28,12 @@ function theme_switcha_admin_notice() {
 			
 			<div class="notice notice-success notice-lh">
 				<p>
-					<strong><?php esc_html_e('☀️ Summer Sale!', 'theme-switcha'); ?></strong> 
-					<?php esc_html_e('Take 35% OFF any of our', 'theme-switcha'); ?> 
+					<strong><?php esc_html_e('🍁 Fall Sale!', 'theme-switcha'); ?></strong> 
+					<?php esc_html_e('Take 25% OFF any of our', 'theme-switcha'); ?> 
 					<a target="_blank" rel="noopener noreferrer" href="https://plugin-planet.com/"><?php esc_html_e('Pro WordPress plugins', 'theme-switcha'); ?></a> 
 					<?php esc_html_e('and', 'theme-switcha'); ?> 
 					<a target="_blank" rel="noopener noreferrer" href="https://books.perishablepress.com/"><?php esc_html_e('books', 'theme-switcha'); ?></a>. 
-					<?php esc_html_e('Apply code', 'theme-switcha'); ?> <code>SUMMER</code> <?php esc_html_e('at checkout. Sale ends 9/20/2026.', 'theme-switcha'); ?> 
+					<?php esc_html_e('Apply code', 'theme-switcha'); ?> <code>FALL2026</code> <?php esc_html_e('at checkout. Sale ends 12/20/2026.', 'theme-switcha'); ?> 
 					<?php echo theme_switcha_dismiss_notice_link(); ?>
 				</p>
 			</div>
@@ -90,7 +90,7 @@ function theme_switcha_dismiss_notice_save() {
 		
 		$location = admin_url('options-general.php?page=theme_switcha_settings&dismiss-notice='. $result);
 		
-		wp_redirect($location);
+		wp_safe_redirect($location);
 		
 		exit;
 		
@@ -112,7 +112,7 @@ function theme_switcha_dismiss_notice_link() {
 
 function theme_switcha_check_date_expired() {
 	
-	$expires = apply_filters('theme_switcha_check_date_expired', '2026-09-20');
+	$expires = apply_filters('theme_switcha_check_date_expired', '2026-12-20');
 	
 	return (new DateTime() > new DateTime($expires)) ? true : false;
 	
@@ -135,7 +135,7 @@ function theme_switcha_reset_options() {
 		if ($dismiss_delete || $options_update) $result = 'true';
 		
 		$location = admin_url('options-general.php?page=theme_switcha_settings&reset-options='. $result);
-		wp_redirect($location);
+		wp_safe_redirect($location);
 		exit;
 		
 	}

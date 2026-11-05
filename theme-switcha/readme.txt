@@ -9,9 +9,9 @@ Contributors: specialk
 Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Requires at least: 4.7
-Tested up to: 7.1
-Stable tag: 3.4.5
-Version:    3.4.5
+Tested up to: 7.2
+Stable tag: 3.5
+Version:    3.5
 Requires PHP: 5.6.20
 Text Domain: theme-switcha
 Domain Path: /languages
@@ -220,7 +220,7 @@ We'll look at how to make a Passkey Link in the next section. For the other two 
 
 **Usage: Passkey Links**
 
-Passkey links are a great way to enable private theme switching without giving the user access to the WP Admin Area. To make a Passkey Link, follow these steps:
+Passkey links are a great way to enable private theme switching without requiring admin-level access. To make a Passkey Link, follow these steps:
 
 1. Visit the Theme Switcha settings page
 2. Enable the "Enable Switching" option
@@ -462,17 +462,15 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 If you like Theme Switcha, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/theme-switcha/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
-**3.4.5 (2026/08/09)**
+**3.5 (2026/11/05)**
 
+* Checks plugin with Plugin Check
+* Improves security of core functions
+* Improves security of plugin settings
+* Improves security of internal redirects
 * Updates plugin settings page
-* Tests on WordPress 7.1
-
-**3.4.4 (2026/04/19)**
-
-* Fixes bug with reset options
-* Updates plugin settings page
-* Improves readme.txt documentation
-* Tests on WordPress 7.0
+* Improves plugin documentation
+* Tests on WordPress 7.2
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/theme-switcha.txt](https://plugin-planet.com/wp/changelog/theme-switcha.txt)

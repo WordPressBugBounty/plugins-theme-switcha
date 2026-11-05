@@ -154,10 +154,10 @@ function theme_switcha_callback_text($args) {
 	
 	$id = isset($args['id']) ? $args['id'] : '';
 	$label = isset($args['label']) ? $args['label'] : '';
-	$value = isset($options[$id]) ? sanitize_text_field($options[$id]) : '';
+	$value = isset($options[$id]) ? esc_html($options[$id]) : '';
 	
-	echo '<input name="theme_switcha_options['. $id .']" type="text" size="40" value="'. $value .'" />';
-	echo '<label class="custom-label" for="theme_switcha_options['. $id .']">'. $label .'</label>';
+	echo '<input name="theme_switcha_options['. esc_attr($id) .']" type="text" size="40" value="'. esc_html($value) .'" />';
+	echo '<label class="custom-label" for="theme_switcha_options['. esc_attr($id) .']">'. $label .'</label>';
 	
 }
 
@@ -171,8 +171,8 @@ function theme_switcha_callback_number($args) {
 	$label = isset($args['label']) ? $args['label'] : '';
 	$value = isset($options[$id]) ? sanitize_text_field($options[$id]) : '';
 	
-	echo '<input name="theme_switcha_options['. $id .']" type="number" class="small-text" min="0" value="'. $value .'" /> ';
-	echo '<label class="custom-label inline-block" for="theme_switcha_options['. $id .']">'. $label .'</label>';
+	echo '<input name="theme_switcha_options['. esc_attr($id) .']" type="number" class="small-text" min="0" value="'. esc_html($value) .'" /> ';
+	echo '<label class="custom-label inline-block" for="theme_switcha_options['. esc_attr($id) .']">'. $label .'</label>';
 	
 }
 
@@ -188,8 +188,8 @@ function theme_switcha_callback_textarea($args) {
 	$label = isset($args['label']) ? $args['label'] : '';
 	$value = isset($options[$id]) ? wp_kses(stripslashes_deep($options[$id]), $allowed_tags) : '';
 	
-	echo '<textarea name="theme_switcha_options['. $id .']" rows="3" cols="50">'. $value .'</textarea>';
-	echo '<label class="custom-label" for="theme_switcha_options['. $id .']">'. $label .'</label>';
+	echo '<textarea name="theme_switcha_options['. esc_attr($id) .']" rows="3" cols="50">'. esc_html($value) .'</textarea>';
+	echo '<label class="custom-label" for="theme_switcha_options['. esc_attr($id) .']">'. $label .'</label>';
 	
 }
 
@@ -203,8 +203,8 @@ function theme_switcha_callback_checkbox($args) {
 	$label = isset($args['label']) ? $args['label'] : '';
 	$checked = isset($options[$id]) ? checked($options[$id], 1, false) : '';
 	
-	echo '<input name="theme_switcha_options['. $id .']" type="checkbox" value="1" '. $checked .' /> ';
-	echo '<label class="custom-label inline-block" for="theme_switcha_options['. $id .']">'. $label .'</label>';
+	echo '<input name="theme_switcha_options['. esc_attr($id) .']" type="checkbox" value="1" '. $checked .' /> ';
+	echo '<label class="custom-label inline-block" for="theme_switcha_options['. esc_attr($id) .']">'. $label .'</label>';
 	
 }
 
@@ -222,7 +222,7 @@ function theme_switcha_callback_select($args) {
 	
 	if ($id === 'allowed_users') $items = theme_switcha_allowed_users();
 	
-	echo '<select name="theme_switcha_options['. $id .']">';
+	echo '<select name="theme_switcha_options['. esc_attr($id) .']">';
 	
 	foreach ($items as $item) {
 		
@@ -232,35 +232,35 @@ function theme_switcha_callback_select($args) {
 		echo '<option '. selected($item_value, $value, false) .' value="'. $item_value .'">'. $item_label .'</option>';
 		
 	}
-	echo '</select> <label class="custom-label inline-block" for="theme_switcha_options['. $id .']">'. $label .'</label>';
+	echo '</select> <label class="custom-label inline-block" for="theme_switcha_options['. esc_attr($id) .']">'. $label .'</label>';
 }
 
 function theme_switcha_callback_reset($args) {
 	
 	$nonce = wp_create_nonce('theme_switcha_reset_options');
-	$href  = esc_url(add_query_arg(array('reset-options-verify' => $nonce), admin_url('options-general.php?page=theme_switcha_settings')));
-	$label = isset($args['label']) ? $args['label'] : esc_html__('Restore default plugin options', 'theme-switcha');
+	$href  = add_query_arg(array('reset-options-verify' => $nonce), admin_url('options-general.php?page=theme_switcha_settings'));
+	$label = isset($args['label']) ? $args['label'] : __('Restore default plugin options', 'theme-switcha');
 	
-	echo '<a class="reset-options" href="'. $href .'">'. $label .'</a>';
+	echo '<a class="reset-options" href="'. esc_url($href) .'">'. esc_html($label) .'</a>';
 	
 }
 
 function theme_switcha_callback_rate($args) {
 	
 	$href  = 'https://wordpress.org/support/plugin/'. THEME_SWITCHA_SLUG .'/reviews/?rate=5#new-post';
-	$title = esc_attr__('Help keep Theme Switcha going strong! A huge THANK YOU for your support!', 'theme-switcha');
-	$text  = isset($args['label']) ? $args['label'] : esc_html__('Show support with a 5-star rating &raquo;', 'theme-switcha');
+	$title = __('Help keep Theme Switcha going strong! A huge THANK YOU for your support!', 'theme-switcha');
+	$text  = isset($args['label']) ? $args['label'] : __('Show support with a 5-star rating &raquo;', 'theme-switcha');
 	
-	echo '<a target="_blank" rel="noopener noreferrer" class="theme-switcha-rate-plugin" href="'. $href .'" title="'. $title .'">'. $text .'</a>';
+	echo '<a target="_blank" rel="noopener noreferrer" class="theme-switcha-rate-plugin" href="'. esc_url($href) .'" title="'. esc_attr($title) .'">'. esc_html($text) .'</a>';
 	
 }
 
 function theme_switcha_callback_support($args) {
 	
 	$href  = 'https://monzillamedia.com/donate.html';
-	$title = esc_attr__('Donate via PayPal, credit card, or cryptocurrency', 'theme-switcha');
-	$text  = isset($args['label']) ? $args['label'] : esc_html__('Show support with a small donation&nbsp;&raquo;', 'theme-switcha');
+	$title = __('Donate via PayPal, credit card, or cryptocurrency', 'theme-switcha');
+	$text  = isset($args['label']) ? $args['label'] : __('Show support with a small donation&nbsp;&raquo;', 'theme-switcha');
 	
-	echo '<a target="_blank" rel="noopener noreferrer" class="theme-switcha-show-support" href="'. $href .'" title="'. $title .'">'. $text .'</a>';
+	echo '<a target="_blank" rel="noopener noreferrer" class="theme-switcha-show-support" href="'. esc_html($href) .'" title="'. esc_attr($title) .'">'. esc_html($text) .'</a>';
 	
 }

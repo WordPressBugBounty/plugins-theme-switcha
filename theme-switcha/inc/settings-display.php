@@ -13,8 +13,8 @@ function theme_switcha_display_settings() { ?>
 	
 	<div class="wrap">
 		<h1>
-			<span class="fa fa-pad fa-exchange"></span> <?php echo THEME_SWITCHA_NAME; ?> 
-			<span class="theme-switcha-version"><?php echo THEME_SWITCHA_VERSION; ?></span>
+			<span class="fa fa-pad fa-exchange"></span> <?php echo esc_html(THEME_SWITCHA_NAME); ?> 
+			<span class="theme-switcha-version"><?php echo esc_html(THEME_SWITCHA_VERSION); ?></span>
 		</h1>
 		<form method="post" action="options.php">
 			
